@@ -1,0 +1,70 @@
+:root {
+  --green: #49BFBF;
+  --white: #FFFFFF;
+  --grayBlack: #282828;
+  --violet: #554F95;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 10px;
+  margin-right: 20px;
+  font-weight: lighter;
+}
+
+.buyTicket{
+  text-decoration: none;
+  background-color: var(--violet);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.hamburgerMenu {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--grayBlack);
+  position: absolute;
+  top: 60px; 
+  right: 0;
+  width: 200px;
+}
+
+.hamburgerMenu a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.hamburgerIcon {
+  display: none; 
+}
+
+@media screen and (max-width: 768px) {
+  .linkContainer {
+    display: none; 
+  }
+
+  .hamburgerIcon {
+    display: block; 
+  }
+}
