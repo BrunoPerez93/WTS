@@ -1,0 +1,6 @@
+@media (min-width: 600px) {
+  #billboardContainer {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+}

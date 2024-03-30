@@ -1,0 +1,84 @@
+.billboard-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.title-cartelera {
+  color: #ffff;
+  width: 100%;
+  padding: 5%;
+  font-size: 30px;
+}
+
+
+.billboard-item {
+  display: flex;
+  margin: 10px;
+  max-width: 300px;
+  gap: 10px;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+.image {
+  max-width: 300px;
+  width: 100%;
+}
+
+.button {
+  max-width: 300px;
+  width: 100%;
+  background-color: #554f95;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 10px;
+  color: #ffff;
+  margin-top: 0px;
+  border: none;
+}
+
+.title {
+  max-width: 300px;
+  margin-bottom: 20px;
+  color: #ffff;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%; 
+}
+
+
+@media only screen and (min-width: 600px) {
+  .scroll-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: hidden;
+  };
+
+  .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+  }
+
+}

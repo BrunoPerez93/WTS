@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import BillboardItem from "./BillboardItem";
 import { getMovies } from "../../helpers/getMovies";
+import './Billboard.css'
 
 
 const BillboardGroup = () => {
@@ -16,41 +17,23 @@ const BillboardGroup = () => {
   }, []);
 
   return (
-    <div style={styles.container}>
-      <div style={styles.titleCartelera}>
+    <div className="billboard-group">
+      <div className="title-cartelera">
         <h2>En cartelera</h2>
       </div>
 
-
-      {allMovies.length > 0 && (
-        allMovies.map(movie => (
-          <BillboardItem
-            key={movie.title}
-            movie={movie}
-          />
-        ))
-      )}
-
-
+      <div className="scroll-container">
+        {allMovies.length > 0 && (
+          allMovies.map(movie => (
+            <BillboardItem
+              key={movie.title}
+              movie={movie}
+            />
+          ))
+        )}
+      </div>
     </div>
   )
-}
-
-const styles = {
-  titleCartelera: {
-    color: '#ffff',
-    width: '100%',
-    padding: '5%',
-    fontSize: '30px',
-  },
-  container: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: '10px',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
 }
 
 export default BillboardGroup;
