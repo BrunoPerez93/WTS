@@ -1,7 +1,10 @@
 const BillboardGroup = () => {
-  return(
+  return (
     <>
-    hola
+      <div>
+        hola
+
+      </div>
     </>
   )
 }

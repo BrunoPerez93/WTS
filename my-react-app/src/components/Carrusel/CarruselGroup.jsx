@@ -4,6 +4,7 @@ import CarruselItem from './CarruselItem';
 
 const CarruselGroup = () => {
   const [allMovies, setAllMovies] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -13,20 +14,28 @@ const CarruselGroup = () => {
     fetchMovies();
   }, []);
 
+  const nextSlide = () => {
+    setCurrentIndex(prevIndex =>
+      prevIndex === allMovies.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex(prevIndex =>
+      prevIndex === 0 ? allMovies.length - 1 : prevIndex - 1
+    );
+  };
+
+
   return (
     <>
-      {allMovies.map(movie => (
+      {allMovies.length > 0 && (
         <CarruselItem
-          key={movie.id}
-          title={movie.title}
-          url={movie.url}
-          poster={movie.poster}
-          rating={movie.rating}
-          images={movie.images}
-          description={movie.description}
-          featured={movie.featured}
+          movie={allMovies[currentIndex]}
+          nextSlide={nextSlide}
+          prevSlide={prevSlide}
         />
-      ))}
+      )}
     </>
   );
 };

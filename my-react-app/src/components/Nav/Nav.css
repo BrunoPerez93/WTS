@@ -9,14 +9,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 10px;
+  background-color: #282828;
+  width: 100%;
+  z-index: 1000;
+  margin-bottom: 10px;
+}
 
+.logoContainer{  
+  padding: 0px 5%;
 }
 
 .linkContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0px 10%;
 }
 
 .links {
@@ -57,6 +65,7 @@
 
 .hamburgerIcon {
   display: none; 
+  padding-right: 10%;
 }
 
 @media screen and (max-width: 768px) {
