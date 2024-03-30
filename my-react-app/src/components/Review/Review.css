@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.formContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-cotainer {
+  display: block;
+  width: 100%;
+  align-items: flex-start;
+  padding-left: 20px;
+  color: #ffff;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 50%;
+}
+
+.div-input {
+  display: flex;
+  flex-direction: column;
+  color: #ffff;
+  padding: 10px;
+}
+
+.input {
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: #554F95;
+  border-radius: 5px;
+  color: #ffff;
+}
+
+.label {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.textarea {
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: #554F95;
+  border-radius: 5px;
+  height: 100px;
+  color: #ffff;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.btn {
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: #554F95;
+  border-radius: 5px;
+  color: #ffff;
+}
+
+.div-select {
+  display: flex;
+  flex-direction: column;
+  color: #ffff;
+  padding: 10px;
+}
+
+.select{
+  margin-bottom: 5px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: #554F95;
+  border-radius: 5px;
+  color: #ffff;
+}
+
+.select option {
+  background-color: #282828;
+}

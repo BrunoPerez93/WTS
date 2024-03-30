@@ -1,8 +1,9 @@
 
 import './App.css'
-import BillboardGroup from './components/Billboard/BillboardGroup'
-import CarruselGroup from './components/Carrusel/CarruselGroup'
+import BillboardGroup from './components/Billboard'
+import CarruselGroup from './components/Carrusel'
 import Nav from './components/Nav'
+import Review from './components/Review'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Nav />
       <CarruselGroup />
       <BillboardGroup />
+      <Review />
     </>
   )
 }
