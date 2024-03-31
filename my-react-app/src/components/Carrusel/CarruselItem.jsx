@@ -54,7 +54,7 @@ const CarruselItem = ({ movie, nextSlide, prevSlide }) => {
 
           <div className='btnContainer'>
             <button className='btnTrailer' onClick={openTrailer}><img src={trailer} /></button>
-            <button className='btnReview'><img src={review} /></button>
+            <a href='#review' className='btnReview'><img src={review} /></a>
           </div>
 
 

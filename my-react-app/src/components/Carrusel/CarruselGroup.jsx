@@ -1,10 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { getMovies } from '../../helpers/getMovies';
 import CarruselItem from './CarruselItem';
+import React from 'react';
 
 const CarruselGroup = () => {
   const [allMovies, setAllMovies] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const carruselRef = useRef(null);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -28,7 +30,7 @@ const CarruselGroup = () => {
 
 
   return (
-    <>
+    <div id="carrusel" ref={carruselRef}>
       {allMovies.length > 0 && (
         <CarruselItem
           movie={allMovies[currentIndex]}
@@ -36,7 +38,7 @@ const CarruselGroup = () => {
           prevSlide={prevSlide}
         />
       )}
-    </>
+    </div>
   );
 };
 

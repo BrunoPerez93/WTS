@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import React from "react";
 import BillboardItem from "./BillboardItem";
 import { getMovies } from "../../helpers/getMovies";
 import './Billboard.css'
@@ -7,6 +8,7 @@ import './Billboard.css'
 const BillboardGroup = () => {
 
   const [allMovies, setAllMovies] = useState([]);
+  const billboardRef = useRef(null);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -16,8 +18,9 @@ const BillboardGroup = () => {
     fetchMovies();
   }, []);
 
+
   return (
-    <div className="billboard-group">
+    <div className="billboard-group" id="billboard" ref={billboardRef}>
       <div className="title-cartelera">
         <h2>En cartelera</h2>
       </div>
@@ -34,6 +37,7 @@ const BillboardGroup = () => {
       </div>
     </div>
   )
-}
+};
+
 
 export default BillboardGroup;

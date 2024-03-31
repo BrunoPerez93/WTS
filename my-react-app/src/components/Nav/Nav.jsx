@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 import './Nav.css'
 import { useState } from 'react';
 import menuIcon from '../../assets/Button.png'
@@ -9,9 +9,10 @@ const Nav = () => {
   const [activeLink, setActiveLink] = useState('');
   const [showMenu, setShowMenu] = useState(false);
 
+
   const handleLinkClick = (link) => {
     setActiveLink(link);
-   
+    setShowMenu(false);
   };
 
   const toggleMenu = () => {
@@ -26,34 +27,33 @@ const Nav = () => {
 
       {showMenu ? (
         <div className='hamburgerMenu'>
-          <Link to='#' onClick={() => toggleMenu()}>X</Link> 
-          <Link to='#' onClick={() => handleLinkClick('Destacadas')}>Destacadas</Link>
-          <Link to='#' onClick={() => handleLinkClick('Cartelera')}>Cartelera</Link>
-          <Link to='#' onClick={() => handleLinkClick('Comprar ticket')}>Comprar ticket</Link>
+          <a href='#carrusel' onClick={() => handleLinkClick('Destacadas')}>Destacadas</a>
+          <a href='#billboard' onClick={() => handleLinkClick('Cartelera')}>Cartelera</a>
+          <a href='#' onClick={() => handleLinkClick('Comprar ticket')}>Comprar ticket</a>
         </div>
       ) : (
         <div className='linkContainer'>
-          <Link
+          <a
             className={activeLink === 'Destacadas' ? 'links active' : 'links'}
-            to='#'
+            href='#carrusel'
             onClick={() => handleLinkClick('Destacadas')}
           >
             Destacadas
-          </Link>
-          <Link
+          </a>
+          <a
             className={activeLink === 'Cartelera' ? 'links active' : 'links'}
-            to='#'
+            href='#billboard'
             onClick={() => handleLinkClick('Cartelera')}
           >
             Cartelera
-          </Link>
-          <Link
+          </a>
+          <a
             className={activeLink === 'Comprar ticket' ? 'buyTicket active' : 'buyTicket'}
-            to='#'
+            href='#'
             onClick={() => handleLinkClick('Comprar ticket')}
           >
             Comprar ticket
-          </Link>
+          </a>
         </div>
       )}
 
