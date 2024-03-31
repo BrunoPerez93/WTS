@@ -4,36 +4,36 @@ import CarruselItem from './CarruselItem';
 import React from 'react';
 
 const CarruselGroup = () => {
-  const [allMovies, setAllMovies] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carruselRef = useRef(null);
+  const [featuredMovies, setFeaturedMovies] = useState([]);
 
   useEffect(() => {
     const fetchMovies = async () => {
       const moviesData = await getMovies();
-      setAllMovies(moviesData);
+      const featured = moviesData.filter(movie => movie.featured);
+      setFeaturedMovies(featured);
     };
     fetchMovies();
   }, []);
 
   const nextSlide = () => {
     setCurrentIndex(prevIndex =>
-      prevIndex === allMovies.length - 1 ? 0 : prevIndex + 1
+      prevIndex === featuredMovies.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
     setCurrentIndex(prevIndex =>
-      prevIndex === 0 ? allMovies.length - 1 : prevIndex - 1
+      prevIndex === 0 ? featuredMovies.length - 1 : prevIndex - 1
     );
   };
 
-
   return (
     <div id="carrusel" ref={carruselRef}>
-      {allMovies.length > 0 && (
+      {featuredMovies.length > 0 && (
         <CarruselItem
-          movie={allMovies[currentIndex]}
+          movie={featuredMovies[currentIndex]}
           nextSlide={nextSlide}
           prevSlide={prevSlide}
         />

@@ -44,3 +44,10 @@ img {
 .modal-content p {
   color: #ffff;
 }
+
+@media only screen and (max-width: 600px) {
+  .modal-content{
+    width: 70%;
+  }
+
+}

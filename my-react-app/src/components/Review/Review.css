@@ -37,7 +37,7 @@
 .input {
   margin-bottom: 5px;
   padding: 10px;
-  background-color: transparent;
+  background-color: #282828;
   border: 1px solid;
   border-color: #554F95;
   border-radius: 5px;
@@ -52,7 +52,7 @@
 .textarea {
   margin-bottom: 5px;
   padding: 10px;
-  background-color: transparent;
+  background-color: #282828;
   border: 1px solid;
   border-color: #554F95;
   border-radius: 5px;
@@ -73,10 +73,16 @@
   margin-bottom: 5px;
   padding: 10px;
   background-color: transparent;
+  border: none;
+  color: #A9A9A9;
+}
+
+.btn:hover {
   border: 1px solid;
   border-color: #554F95;
   border-radius: 5px;
   color: #ffff;
+
 }
 
 .div-select {
@@ -112,10 +118,70 @@
   }
 
   .title-cotainer h1 {
-    font-size: 25px;  
+    font-size: 25px;
     text-align: start;
   }
-  .title-cotainer p{
+
+  .title-cotainer p {
     text-align: start;
+  }
+
+  .popBasket {
+    display: none;
+  }
+
+  .popContainer {
+    position: relative;
+    width: 100%;
+  }
+  
+  .pop {
+    position: absolute;
+    width: 100%;
+    opacity: 0.5;
+    z-index: -1;
+    top: 20%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .buttonContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .title-cotainer h1 {
+    font-size: 25px;
+    text-align: start;
+  }
+
+  .title-cotainer p {
+    text-align: start;
+  }
+
+  .popBasketContainer{
+    position: relative;
+    width: 50%;
+  }
+
+  .popBasket {
+    position: absolute;
+    width: 70%;
+    opacity: 0.5;
+    z-index: -1;
+    top: 20%;
+  }
+
+  .popContainer {
+    position: relative;
+    width: 50%;
+  }
+  
+  .pop {
+    position: absolute;
+    width: 70%;
+    opacity: 0.5;
+    z-index: -1;
+    right: -90%;
   }
 }

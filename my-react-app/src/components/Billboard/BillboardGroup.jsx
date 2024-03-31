@@ -3,6 +3,7 @@ import React from "react";
 import BillboardItem from "./BillboardItem";
 import { getMovies } from "../../helpers/getMovies";
 import './Billboard.css'
+import pop from '../../assets/Popcorn 1.png'
 
 
 const BillboardGroup = () => {
@@ -23,6 +24,10 @@ const BillboardGroup = () => {
     <div className="billboard-group" id="billboard" ref={billboardRef}>
       <div className="title-cartelera">
         <h2>En cartelera</h2>
+      </div>
+
+      <div className="containerPop">
+        <img className="pops" src={pop} alt="Pop"/>
       </div>
 
       <div className="scroll-container">

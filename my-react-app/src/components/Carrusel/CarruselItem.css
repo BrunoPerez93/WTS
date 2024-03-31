@@ -131,38 +131,6 @@
   margin: 0 10px;
 }
 
-@media only screen and (min-width: 600px) {
-  .containerCarruselItem {
-    justify-content: center;
-  }
-
-  .carruselSlides {
-    max-width: 1200px;
-  }
-
-  .posterContainer {
-    max-width: 50%;
-  }
-
-  .btnContainer {
-    position: absolute;
-    bottom: 35%;
-    left: 55%;
-    transform: translateX(-50%);
-  }
-
-  .ratingContainer {
-    position: relative;
-    top: -23%;
-    left: 7%;
-  }
-
-  .containerDescription{
-    margin-left: 3vw;
-  }
-}
-
-
 @media only screen and (max-width: 600px) {
   .containerCarruselItem {
     height: auto;
@@ -185,7 +153,7 @@
   .ratingContainer {
     position: absolute;
     top: 5%;
-    left: 10%;
+    left: 12%;
   }
 
   .ratingContainer img {
@@ -217,3 +185,155 @@
   }
 
 }
+
+@media only screen and (min-width: 600px) {
+  .containerCarruselItem {
+    justify-content: center;
+  }
+
+  .carruselSlides {
+    max-width: 1200px;
+  }
+
+  .posterContainer {
+    max-width: 50%;
+  }
+
+  .btnContainer {
+    position: absolute;
+    bottom: 25%;
+    left: 55%;
+    transform: translateX(-50%);
+  }
+
+  .ratingContainer {
+    position: relative;
+    top: -35%;
+    left: 7%;
+  }
+
+  .btnPrev img {
+    width: 50px;
+  }
+
+  .btnNext img{
+    width: 50px;
+  }
+
+  .containerDescription {
+    margin-left: 5vw;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .containerCarruselItem {
+    justify-content: center;
+  }
+
+  .carruselSlides {
+    max-width: 1200px;
+  }
+
+  .posterContainer {
+    max-width: 50%;
+  }
+
+  .btnContainer {
+    position: absolute;
+    bottom: 25%;
+    left: 55%;
+    transform: translateX(-50%);
+  }
+
+  .ratingContainer {
+    position: relative;
+    top: -35%;
+    left: 7%;
+  }
+
+  .btnPrev img {
+    width: 50px;
+  }
+
+  .btnNext img{
+    width: 50px;
+  }
+
+  .containerDescription {
+    z-index: -1;
+    margin-left: 5vw;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .containerCarruselItem {
+    justify-content: center;
+  }
+
+  .carruselSlides {
+    max-width: 1200px;
+  }
+
+  .posterContainer {
+    max-width: 50%;
+  }
+
+  .btnContainer {
+    position: absolute;
+    bottom: 35%;
+    left: 55%;
+    transform: translateX(-50%);
+  }
+
+  .ratingContainer {
+    position: relative;
+    top: -23%;
+    left: 7%;
+  }
+
+  .containerDescription {
+    margin-left: 3vw;
+    z-index: -1;
+
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  .containerCarruselItem {
+    justify-content: center;
+  }
+
+  .carruselSlides {
+    max-width: 1200px;
+  }
+
+  .posterContainer {
+    max-width: 50%;
+  }
+
+  .btnContainer {
+    position: absolute;
+    bottom: 40%;
+    left: 55%;
+    transform: translateX(-50%);
+  }
+
+  .ratingContainer {
+    position: relative;
+    top: -17%;
+    left: 7%;
+  }
+
+  .btnPrev img {
+    width: 100px;
+  }
+
+  .btnNext img{
+    width: 100px;
+  }
+
+  .containerDescription {
+    margin-left: 2.5vw;
+  }
+}
+

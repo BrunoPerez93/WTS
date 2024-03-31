@@ -39,6 +39,22 @@ const FormReview = () => {
       return;
     }
 
+    if (name.length < 4) {
+      setMessageError('El nombre debe tener al menos 4 caracteres');
+      setTimeout(() => {
+        setMessageError('');
+      }, 5000);
+      return;
+    }
+
+    if (review.length < 10) {
+      setMessageError('La reseña debe tener al menos 10 caracteres');
+      setTimeout(() => {
+        setMessageError('');
+      }, 5000);
+      return;
+    }
+
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       setMessageError('El email no es valido')
