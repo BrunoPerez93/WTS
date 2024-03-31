@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getMovies } from '../../helpers/getMovies';
 import '../Review/Review.css'
 import useForm from "../hooks/useForm";
+import ModalReview from "../Modal/ModalReview";
 
 const FormReview = () => {
 
@@ -15,6 +16,9 @@ const FormReview = () => {
   const { name, email, movieSelect, review } = formState;
 
   const [movieTitles, setMovieTitles] = useState([]);
+  const [messageError, setMessageError] = useState('');
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedMovieTitle, setSelectedMovieTitle] = useState('');
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -27,7 +31,35 @@ const FormReview = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Form submitted!');
+    if (!name || !email || !movieSelect || !review) {
+      setMessageError('Todos los campos son obligatorios')
+      setTimeout(() => {
+        setMessageError('')
+      }, 5000)
+      return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      setMessageError('El email no es valido')
+      setTimeout(() => {
+        setMessageError('')
+      }, 5000)
+      return;
+    }
+
+    setIsModalOpen(true);
+    setSelectedMovieTitle(movieSelect);
+    onResetForm();
+  };
+
+  const handleReset = (event) => {
+    event.preventDefault();
+    onResetForm();
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -43,7 +75,6 @@ const FormReview = () => {
             onChange={onInputChange}
             name="movieSelect"
             value={movieSelect}
-            required
           >
             <option value=''>Seleccione...</option>
             {movieTitles.map((title, index) => (
@@ -62,7 +93,6 @@ const FormReview = () => {
             name="name"
             value={name}
             onChange={onInputChange}
-            required
           />
         </div>
 
@@ -75,7 +105,6 @@ const FormReview = () => {
             name="email"
             value={email}
             onChange={onInputChange}
-            required
           />
         </div>
 
@@ -88,15 +117,25 @@ const FormReview = () => {
             name="review"
             value={review}
             onChange={onInputChange}
-            required
           />
         </div>
 
+        {messageError && (
+          <div className="messageError">{messageError} </div>
+        )}
+
         <div className="buttonContainer">
-          <button className="btn">Finalizar</button>
-          <button className="btn">Reiniciar</button>
+          <button type="submit" className="btn">Finalizar</button>
+          <button type="button" onClick={handleReset} className="btn">Reiniciar</button>
 
         </div>
+
+        {isModalOpen && (
+          <ModalReview
+            movieTitle={selectedMovieTitle}
+            onClose={closeModal}
+          />
+        )}
 
       </div>
 

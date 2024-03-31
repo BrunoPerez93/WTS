@@ -1,9 +1,9 @@
 
 import './App.css'
-import BillboardGroup from './components/Billboard'
-import CarruselGroup from './components/Carrusel'
-import Nav from './components/Nav'
-import Review from './components/Review'
+import BillboardGroup from './components/Billboard/BillboardGroup'
+import CarruselGroup from './components/Carrusel/CarruselGroup'
+import Nav from './components/Nav/Nav'
+import Review from './components/Review/Review'
 
 function App() {
 
