@@ -7,6 +7,14 @@
   align-items: center;
 }
 
+.carruselSlides {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .containerCarruselItem img.background-image {
   position: absolute;
   top: 0;
@@ -19,12 +27,9 @@
 
 }
 
-.carruselSlides {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.posterContainer {
+  margin: 0 auto;
+  max-width: 80%;
 }
 
 .btnNext,
@@ -62,13 +67,10 @@
   padding-top: 5px;
   border-radius: 10px;
   font-size: 10px;
-  position: absolute;
-  left: 23%;
-  top: 24%;
 }
 
 .ratingContainer img {
-  height: 10px;
+  width: 20px;
 }
 
 .poster {
@@ -82,8 +84,8 @@
   border: 3px solid #554F95;
   border-radius: 10px;
   position: relative;
-  top: -15%;
-  left: -2%;
+  top: -10%;
+  left: -12%;
 }
 
 .containerDescription h2 {
@@ -110,9 +112,57 @@
 .btnContainer {
   display: flex;
   justify-content: center;
-  margin: 10px;
-  position: absolute;
+  align-items: end;
 }
+
+.btnContainer img {
+  width: 100px;
+}
+
+
+.btnTrailer {
+  background-color: transparent;
+  border: none;
+  margin: 0 10px;
+}
+
+.btnReview {
+  background-color: transparent;
+  border: none;
+  margin: 0 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .containerCarruselItem {
+    justify-content: center;
+  }
+
+  .carruselSlides {
+    max-width: 1200px;
+  }
+
+  .posterContainer {
+    max-width: 50%;
+  }
+
+  .btnContainer {
+    position: absolute;
+    bottom: 35%;
+    left: 55%;
+    transform: translateX(-50%);
+  }
+
+  .ratingContainer {
+    position: relative;
+    top: -13vw;
+    left: 3vw;
+  }
+
+  .containerDescription{
+    margin-left: 3vw;
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
   .containerCarruselItem {
@@ -139,7 +189,11 @@
     left: 10%;
   }
 
-  .btnContainer{
+  .ratingContainer img {
+    width: 20px;
+  }
+
+  .btnContainer {
     position: relative;
   }
 
@@ -163,18 +217,4 @@
     width: 60px;
   }
 
-}
-
-.btnTrailer {
-  height: 100px;
-  background-color: transparent;
-  border: none;
-  margin: 10px;
-}
-
-.btnReview {
-  height: 100px;
-  background-color: transparent;
-  border: none;
-  margin: 10px;
 }

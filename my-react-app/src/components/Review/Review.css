@@ -1,7 +1,8 @@
-.container {
+.reviewContainer {
   display: flex;
   flex-direction: column;
   margin: 10px;
+  width: 100%;
 }
 
 .formContainer {
@@ -15,7 +16,7 @@
   display: block;
   width: 100%;
   align-items: flex-start;
-  padding-left: 20px;
+  margin-left: 98px;
   color: #ffff;
 }
 
@@ -105,15 +106,16 @@
 
 
 @media screen and (max-width: 600px) {
-  .buttonContainer{
+  .buttonContainer {
     display: flex;
     flex-direction: column;
   }
-  .title-cotainer{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: 50%;
+
+  .title-cotainer h1 {
+    font-size: 25px;  
+    text-align: start;
+  }
+  .title-cotainer p{
+    text-align: start;
   }
 }

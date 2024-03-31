@@ -19,7 +19,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className='container'>
+    <nav className='navContainer'>
       <div className='logoContainer'>
         <img src={logo} alt="logo" />
       </div>

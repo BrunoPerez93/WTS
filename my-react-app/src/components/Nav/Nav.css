@@ -5,18 +5,17 @@
   --violet: #554F95;
 }
 
-.container {
+.navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   background-color: #282828;
-  width: 100%;
   z-index: 1000;
   margin-bottom: 10px;
 }
 
-.logoContainer{  
+.logoContainer {
   padding: 0px 5%;
 }
 
@@ -35,7 +34,7 @@
   font-weight: lighter;
 }
 
-.buyTicket{
+.buyTicket {
   text-decoration: none;
   background-color: var(--violet);
   color: var(--white);
@@ -43,18 +42,19 @@
   border-radius: 5px;
 }
 
-.active {
-  font-weight: bold;
-}
 
 .hamburgerMenu {
   display: flex;
   flex-direction: column;
   background-color: var(--grayBlack);
+  border: 1px solid;
+  border-color: var(--violet);
+  border-radius: 10px;
   position: absolute;
-  top: 60px; 
-  right: 0;
-  width: 200px;
+  top: 60px;
+  right: 15%;
+  max-width: 200px;
+  z-index: 1000;
 }
 
 .hamburgerMenu a {
@@ -64,16 +64,31 @@
 }
 
 .hamburgerIcon {
-  display: none; 
+  display: none;
   padding-right: 10%;
 }
 
+.active {
+  font-weight: bold;
+}
+
+
+
 @media screen and (max-width: 600px) {
   .linkContainer {
-    display: none; 
+    display: none;
   }
 
   .hamburgerIcon {
-    display: block; 
+    display: block;
   }
+
+  .hamburgerIcon img {
+    width: 50px;
+  }
+
+  .logoContainer img {
+    width: 50px;
+  }
+  
 }

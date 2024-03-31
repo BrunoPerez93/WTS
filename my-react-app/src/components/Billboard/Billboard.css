@@ -62,7 +62,7 @@
   gap: 10px;
   overflow-x: auto;
   white-space: nowrap;
-  width: 100%; 
+  width: auto; 
 }
 
 

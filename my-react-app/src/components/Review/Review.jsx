@@ -3,7 +3,7 @@ import './Review.css'
 
 const Review = () => {
   return (
-    <div className="container">
+    <div className="reviewContainer">
 
       <div className="title-cotainer">
         <h1>Reseña de peliculas</h1>

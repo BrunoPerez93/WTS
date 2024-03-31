@@ -9,12 +9,12 @@ function App() {
 
 
   return (
-    <>
+    <div>
       <Nav />
       <CarruselGroup />
       <BillboardGroup />
       <Review />
-    </>
+    </div>
   )
 }
 
