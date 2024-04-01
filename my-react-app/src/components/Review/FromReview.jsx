@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getMovies } from '../../helpers/getMovies';
 import '../Review/Review.css'
-import useForm from "../hooks/useForm";
+import useForm from "../../hooks/useForm";
 import ModalReview from "../Modal/ModalReview";
 
 const FormReview = () => {
