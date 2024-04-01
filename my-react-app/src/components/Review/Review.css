@@ -117,6 +117,10 @@
     flex-direction: column;
   }
 
+  .title-cotainer{
+    width: 50%;
+  }
+
   .title-cotainer h1 {
     font-size: 25px;
     text-align: start;
@@ -134,7 +138,7 @@
     position: relative;
     width: 100%;
   }
-  
+
   .pop {
     position: absolute;
     width: 100%;
@@ -159,29 +163,29 @@
     text-align: start;
   }
 
-  .popBasketContainer{
+  .popBasketContainer {
     position: relative;
     width: 50%;
   }
 
   .popBasket {
     position: absolute;
-    width: 70%;
+    width: 50%;
     opacity: 0.5;
     z-index: -1;
-    top: 20%;
+    left: -5%;
   }
 
   .popContainer {
     position: relative;
     width: 50%;
   }
-  
+
   .pop {
     position: absolute;
-    width: 70%;
+    width: 50%;
     opacity: 0.5;
     z-index: -1;
-    right: -90%;
+    right: -100%;
   }
 }

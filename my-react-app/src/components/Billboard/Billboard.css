@@ -29,6 +29,7 @@
   flex-direction: column;
   align-items: center;
   width: 300px;
+ 
 }
 
 .image {
@@ -61,7 +62,7 @@
   justify-content: flex-start;
   gap: 10px;
   overflow-x: auto;
-  white-space: nowrap;
+  white-space: pre-wrap;
   width: auto;
 }
 
@@ -73,19 +74,15 @@
     overflow-x: hidden;
   }
 
-
   .content {
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
+    width: auto;
+    justify-content: end;
   }
 
-}
-
-
-@media only screen and (min-width: 600px) {
   .containerPop {
     position: relative;
     width: 100%;

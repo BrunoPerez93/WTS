@@ -9,7 +9,7 @@ const ModalReview = ({ movieTitle, onClose }) => {
         <h2>Reseña de peliculas</h2>
         <h1>!Muchas gracias!</h1>
         <img src={star} alt='Esterlla' />
-        <p> Tu reseña sobre la pelicula {movieTitle} ha sido enviada.</p>
+        <p> Tu reseña sobre la pelicula "{movieTitle}" ha sido enviada.</p>
       </div>
     </div>
   )
