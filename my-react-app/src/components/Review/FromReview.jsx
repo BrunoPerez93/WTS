@@ -20,6 +20,7 @@ const FormReview = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedMovieTitle, setSelectedMovieTitle] = useState('');
 
+
   useEffect(() => {
     const fetchMovies = async () => {
       const movies = await getMovies();
@@ -66,7 +67,6 @@ const FormReview = () => {
 
     setIsModalOpen(true);
     setSelectedMovieTitle(movieSelect);
-    onResetForm();
   };
 
   const handleReset = (event) => {
@@ -149,6 +149,7 @@ const FormReview = () => {
         {isModalOpen && (
           <ModalReview
             movieTitle={selectedMovieTitle}
+            name={name}
             onClose={closeModal}
           />
         )}
